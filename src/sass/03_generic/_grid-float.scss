@@ -1,0 +1,90 @@
+/*------------------------------------*\
+  GRID FLOAT
+\*------------------------------------*/
+
+@mixin grid-float() {
+  .row {
+    margin-right: -$grid-gutter-width/2;
+    margin-left: -$grid-gutter-width/2;
+  }
+  $grid-classes: '';
+  @for $i from 1 through $grid-columns {
+    $grid-classes: $grid-classes+'.col-#{$i}, .col-xl-#{$i}, .col-lg-#{$i}, .col-md-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, ';
+  }
+  #{$grid-classes} {
+    @include grid-float-basics();
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-float-col($i);
+    }
+  }
+  @for $i from 0 through $grid-columns {
+    .col-offset-#{$i} {
+      margin-left: #{($i / $grid-columns) * 100%};
+    }
+  }
+  @for $i from 0 through $grid-columns {
+    .col-pull-#{$i} {
+      margin-left: #{($i / $grid-columns) * (-1) * 100%};
+    }
+  }
+  @each $device,
+  $screen-device in (xl, $screen-xl),
+  (lg, $screen-lg),
+  (md, $screen-md),
+  (sm, $screen-sm),
+  (xs, $screen-xs) {
+    @media #{$screen-device} {
+      @for $i from 1 through $grid-columns {
+        .col-#{$device}-#{$i} {
+          @include grid-float-col($i);
+        }
+      }
+      @for $i from 0 through $grid-columns {
+        .col-#{$device}-offset-#{$i} {
+          margin-left: #{($i / $grid-columns) * 100%};
+        }
+      }
+      @for $i from 0 through $grid-columns {
+        .col-#{$device}-pull-#{$i} {
+          margin-left: #{($i / $grid-columns) * (-1) * 100%};
+        }
+      }
+    }
+  }
+
+  .row:before,
+  .row:after {
+    content: " ";
+    display: table;
+  }
+
+  .row:after {
+    clear: both;
+  }
+
+  @media only screen and (max-width: $page-max-size+$grid-gutter-width) {
+    .row {
+      margin: 0;
+
+      //nested rows still should have negative margin
+      .row {
+        margin-right: -$grid-gutter-width/2;
+        margin-left: -$grid-gutter-width/2;
+      }
+    }
+  }
+}
+
+@mixin grid-float-basics {
+  min-height: 1px;
+  padding-left: $grid-gutter-width/2;
+  padding-right: $grid-gutter-width/2;
+  float: left;
+  position: relative;
+}
+
+@mixin grid-float-col($i) {
+  width: #{($i / $grid-columns) * 100%};
+}

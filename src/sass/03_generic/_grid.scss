@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  GRID GENERATOR
+\*------------------------------------*/
+
+$screen-xl: "only screen and (max-width: #{$breakpoint-lg + 1})";
+$screen-lg: "only screen and (max-width: #{$breakpoint-lg})";
+$screen-md: "only screen and (max-width: #{$breakpoint-md})";
+$screen-sm: "only screen and (max-width: #{$breakpoint-sm})";
+$screen-xs: "only screen and (max-width: #{$breakpoint-xs})";
+
+
+@import 'grid-float';
+@import 'grid-flex';
+@import 'grid-inlineblock';
+
+@if ($use-grid) {
+  @if ($grid-variation == 'flex') {
+    @include grid-flex();
+  }
+  @else if ($grid-variation == 'float') {
+    @include grid-float();
+  }
+  @else if ($grid-variation == 'inlineblock') {
+    @include grid-inlineblock();
+  }
+}

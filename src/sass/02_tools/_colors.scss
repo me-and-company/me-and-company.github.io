@@ -1,0 +1,13 @@
+@function color($color, $tone: 'base', $alpha: 1) {
+  @if type-of(map-get($colors, $color)) !=color {
+    @if type-of(map-get(map-get($colors, $color), $tone)) !=color {
+      @return rgba(brightness(map-get(map-get($colors, $color), 'base'), $tone), $alpha);
+    }
+    @else {
+      @return rgba(map-get(map-get($colors, $color), $tone), $alpha);
+    }
+  }
+  @else {
+    @return rgba(brightness(map-get($colors, $color), $tone), $alpha);
+  }
+}

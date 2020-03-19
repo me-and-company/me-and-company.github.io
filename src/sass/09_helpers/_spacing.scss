@@ -1,0 +1,299 @@
+@if ($use-spacing-helpers) {
+
+
+@each $key, $value in $spacing {
+  .pt-#{$key} {
+    padding-top: spacing($key);
+  }
+  .pr-#{$key} {
+    padding-right: spacing($key);
+  }
+  .pb-#{$key} {
+    padding-bottom: spacing($key);
+  }
+  .pl-#{$key} {
+    padding-left: spacing($key);
+  }
+
+  .text-pt-#{$key} {
+    padding-top: text-spacing($key);
+  }
+  .text-pb-#{$key} {
+    padding-bottom: text-spacing($key);
+  }
+
+  .mt-#{$key} {
+    margin-top: spacing($key);
+  }
+  .mr-#{$key} {
+    margin-right: spacing($key);
+  }
+  .mb-#{$key} {
+    margin-bottom: spacing($key);
+  }
+  .ml-#{$key} {
+    margin-left: spacing($key);
+  }
+
+  .text-mt-#{$key} {
+    margin-top: text-spacing($key);
+  }
+  .text-mb-#{$key} {
+    margin-bottom: text-spacing($key);
+  }
+
+  .n-mt-#{$key} {
+    margin-top: -1 * spacing($key);
+  }
+  .n-mr-#{$key} {
+    margin-right: -1 * spacing($key);
+  }
+  .n-mb-#{$key} {
+    margin-bottom: -1 * spacing($key);
+  }
+  .n-ml-#{$key} {
+    margin-left: -1 * spacing($key);
+  }
+}
+
+
+}
+
+
+
+/*
+** MEDIA QUERIES
+*/
+@if ($use-spacing-helpers-responsive) {
+
+
+@each $key, $value in $spacing {
+  @include breakpoint(lg) {
+    .pt-lg-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-lg-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-lg-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-lg-#{$key} {
+      padding-left: spacing($key);
+    }
+
+    .text-pt-lg-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-lg-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+
+    .mt-lg-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-lg-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-lg-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-lg-#{$key} {
+      margin-left: spacing($key);
+    }
+
+    .text-mt-lg-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-lg-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+
+    .n-mt-lg-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-lg-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-lg-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-lg-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+@each $key, $value in $spacing {
+  @include breakpoint(md) {
+    .pt-md-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-md-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-md-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-md-#{$key} {
+      padding-left: spacing($key);
+    }
+
+    .text-pt-md-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-md-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+
+    .mt-md-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-md-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-md-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-md-#{$key} {
+      margin-left: spacing($key);
+    }
+
+    .text-mt-md-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-md-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+
+    .n-mt-md-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-md-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-md-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-md-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+@each $key, $value in $spacing {
+  @include breakpoint(sm) {
+    .pt-sm-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-sm-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-sm-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-sm-#{$key} {
+      padding-left: spacing($key);
+    }
+
+    .text-pt-sm-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-sm-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+
+    .mt-sm-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-sm-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-sm-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-sm-#{$key} {
+      margin-left: spacing($key);
+    }
+
+    .text-mt-sm-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-sm-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+
+    .n-mt-sm-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-sm-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-sm-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-sm-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+@each $key, $value in $spacing {
+  @include breakpoint(xs) {
+    .pt-xs-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-xs-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-xs-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-xs-#{$key} {
+      padding-left: spacing($key);
+    }
+
+    .text-pt-xs-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-xs-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+
+    .mt-xs-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-xs-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-xs-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-xs-#{$key} {
+      margin-left: spacing($key);
+    }
+
+    .text-mt-xs-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-xs-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+
+    .n-mt-xs-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-xs-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-xs-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-xs-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+
+} // if use-spacing-helpers-responsive
