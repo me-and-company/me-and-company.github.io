@@ -5,4 +5,10 @@ footer {
 
   color: color(grey, 100);
   @include font-size(s);
+
+  .logo {
+    svg path {
+      fill: currentColor;
+    }
+  }
 }

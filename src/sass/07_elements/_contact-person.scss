@@ -1,0 +1,46 @@
+.contact-person {
+  ._image, ._infos {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  ._image {
+    width: 100px;
+    margin-right: spacing(s);
+    border-radius: spacing(xs);
+    overflow: hidden;
+  }
+
+  ._infos {
+    max-width: 65%;
+  }
+
+  ._name {
+    margin-bottom: text-spacing(xs);
+    @include font-size(l);
+  }
+}
+
+
+
+@include breakpoint(xs) {
+  .contact-person {
+    ._image, ._infos {
+      text-align: center;
+    }
+
+    ._image {
+      margin-right: 0;
+      margin-bottom: spacing(s);
+
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    ._infos {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
