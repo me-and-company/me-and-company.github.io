@@ -1,0 +1,57 @@
+.button {
+  padding-top: spacing(xs);
+  padding-bottom: spacing(xs);
+  padding-left: spacing(s);
+  padding-right: spacing(s);
+  border-radius: spacing(m);
+
+  display: inline-block;
+
+  @include font-size(base);
+  font-weight: bold;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background-color .4s ease;
+
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &.-blue {
+    background-color: color(brand);
+    color: color(grey, 100);
+
+    &:hover {
+      background-color: darken(color(brand), 5);
+    }
+  }
+
+  &.-full-width {
+    width: 100%;
+    display: block;
+  }
+
+  &.-outline {
+    border: 1px solid color(base);
+    background-color: transparent;
+
+    transition: color .4s ease, background-color .4s ease;
+
+    &:hover {
+      background-color: color(base);
+      color: color(grey, 100);
+    }
+  }
+}
+
+
+
+@include breakpoint(sm) {
+  .button {
+    padding-left: spacing(s);
+    padding-right: spacing(s);
+  }
+}

@@ -1,0 +1,32 @@
+.logo {
+  width: $base-spacing * 32;
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    display: block;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+  }
+}
+
+
+@include breakpoint(sm) {
+  .logo {
+    width: $base-spacing * 20;
+  }
+}
+
+
+
+//IE Hack
+_:-ms-fullscreen, :root .logo {
+  svg {
+    height: 62px;
+  }
+}
+

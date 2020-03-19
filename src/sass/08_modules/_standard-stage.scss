@@ -1,0 +1,12 @@
+.standard-stage {
+  margin-bottom: spacing(xl);
+  color: color(grey, 100);
+
+  .ratio-box ._content {
+    top: 50%;
+    bottom: auto;
+
+    transform: translate(0, -50%);
+  }
+
+}

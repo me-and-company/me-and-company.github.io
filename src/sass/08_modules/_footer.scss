@@ -1,0 +1,8 @@
+footer {
+  padding-top: spacing(m-more);
+  padding-bottom: spacing(m-more);
+  background-color: color(blue, 600);
+
+  color: color(grey, 100);
+  @include font-size(s);
+}

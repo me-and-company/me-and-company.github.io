@@ -2,6 +2,10 @@ p {
   margin-top: 0;
   margin-bottom: text-spacing(s);
   color: inherit;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 b {

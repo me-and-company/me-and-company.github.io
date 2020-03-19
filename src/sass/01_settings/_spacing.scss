@@ -1,11 +1,16 @@
 $base-spacing: 4px;
+$multiplier: 2;
 
 $spacing: (
+  0: 0,
   xxs: 1,
   xs: 2,
   s: 3,
+  m-less: 4,
   m: 5,
-  l: 8,
+  m-more: 6,
+  l-less: 8,
+  l: 10,
   xl: 13,
-  xxl: 21,
+  xxl: 18,
 );

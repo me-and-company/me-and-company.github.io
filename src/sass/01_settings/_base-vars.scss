@@ -10,13 +10,13 @@ $base-letter-spacing: 1.3px;
 ** PAGE SIZES
 */
 
-$page-max-size: 920px;
+$page-max-size: 1136px;
 
 /*
 ** USE VARS (decide what settings to use)
 */
 
 $use-spacing-helpers: true;
-$use-spacing-helpers-responsive: false;
+$use-spacing-helpers-responsive: true;
 
 $use-grid: true;

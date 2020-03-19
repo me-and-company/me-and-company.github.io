@@ -37,7 +37,19 @@
 @import '05_layout/site';
 
 // import atoms
+@import '06_atoms/button';
 @import '06_atoms/icon';
+@import '06_atoms/link';
+
+// import elements
+@import '07_elements/main-nav';
+@import '07_elements/ratio-box';
+
+// import modules
+@import '08_modules/concept-insight';
+@import '08_modules/footer';
+@import '08_modules/header-bar';
+@import '08_modules/standard-stage';
 
 // import helpers
 @import '09_helpers/display';

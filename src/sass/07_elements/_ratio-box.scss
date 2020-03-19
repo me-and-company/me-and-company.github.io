@@ -13,18 +13,22 @@
     display: block;
   }
 
-  .content {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    overflow: hidden;
-
+  ._image,
+  ._content {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+  ._image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: var(--bg-src) !important;
+
+    overflow: hidden;
 
     iframe {
       width: 100%;
@@ -42,9 +46,23 @@
   }
 }
 
+.ratio-box.-parent-height {
+  height: 100%;
+
+  &::before {
+    content: none;
+  }
+}
+
 .ratio-box.-square {
   &::before {
     padding-top: 100%;
+  }
+}
+
+.ratio-box.-wide-screen {
+  &::before {
+    padding-top: 40%;
   }
 }
 
@@ -78,16 +96,22 @@
   }
 }
 
+.ratio-box.-upright {
+  &::before {
+    padding-top: 118%;
+  }
+}
+
 .ratio-box.-portrait {
   &::before {
-    padding-top: 116%;
+    padding-top: 130%;
   }
 }
 
 
 @supports (object-fit: cover) {
   .ratio-box {
-    .content:not(.-show-background) {
+    ._image:not(.-show-background) {
       background-image: none !important;
 
       img, video {
@@ -103,10 +127,28 @@
 
 @supports (object-fit: cover) and (-ms-ime-align:auto) {
   .ratio-box {
-    .content:not(.-show-background) {
+    ._image:not(.-show-background) {
       video {
         height: auto;
       }
+    }
+  }
+}
+
+
+
+@include breakpoint(sm) {
+  .ratio-box {
+    ._image {
+      background-image: var(--bg-sm-src) !important;
+    }
+  }
+}
+
+@include breakpoint(xs) {
+  .ratio-box {
+    ._image {
+      background-image: var(--bg-xs-src) !important;
     }
   }
 }

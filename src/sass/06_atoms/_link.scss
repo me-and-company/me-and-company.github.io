@@ -1,0 +1,21 @@
+.link {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: color(brand);
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: color .4s ease;
+  }
+
+  &:hover {
+    color: darken(color(brand), 5);
+  }
+
+  &.-block {
+    display: inline-block;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,56 @@
+.main-nav {
+  ul {
+    margin-bottom: 0;
+  }
+
+  .menu-item {
+    &:not(:first-child) {
+      margin-left: spacing(xl) / 2;
+    }
+    &:not(:last-child) {
+      margin-right: spacing(xl) / 2;
+    }
+
+    display: inline-block;
+
+    color: color(brand);
+    @include font-size(s);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: color .4s ease;
+
+    &,
+    &:link,
+    &:visited,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: darken(color(brand), 5);
+    }
+
+    &.current-menu-item {
+      border-bottom: 2px solid color(brand);
+    }
+  }
+}
+
+
+
+@include breakpoint(xs) {
+  .main-nav {
+    .menu-item {
+      &:not(:first-child) {
+        margin-left: spacing(xxs);
+      }
+      &:not(:last-child) {
+        margin-right: spacing(xxs);
+      }
+
+      @include font-size(s);
+    }
+  }
+}
